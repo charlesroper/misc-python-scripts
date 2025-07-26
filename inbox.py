@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 This script allows you to quickly append timestamped notes to a designated
@@ -52,10 +51,12 @@ def main() -> None:
 
         with open(scratch_path, "a", encoding="utf-8") as f:
             # Write the timestamp as a top-level bullet
-            f.write(f"\n- {now}")
+            f.write(f"\n{now}")
             # Write each line as an indented sub-bullet
             for entry_line in lines:
                 f.write(f"\n\t- {entry_line}")
+            # Ensure an extra line break at the end
+            f.write("\n")
         print("✅ Entry added.")
     else:
         print("⚠️ No input received. Nothing added.")
