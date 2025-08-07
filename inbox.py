@@ -54,7 +54,7 @@ def main() -> None:
             f.write(f"\n{now}")
             # Write each line as an indented sub-bullet
             for entry_line in lines:
-                f.write(f"\n\t- {entry_line}")
+                f.write(f"\n- {entry_line}")
             # Ensure an extra line break at the end
             f.write("\n")
         print("✅ Entry added.")
